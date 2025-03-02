@@ -1,4 +1,4 @@
-
+// Avoid these types of comparisons
 console.log(null > 0);
 console.log(null < 0);
 console.log(null >= 0);

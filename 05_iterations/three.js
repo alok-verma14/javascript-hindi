@@ -27,6 +27,17 @@ for (const key of map) {
 // console.log(map);
 
 for (const [key, value] of map) {
-    console.log(`${key} => ${value}`);
+    // console.log(`${key} => ${value}`);
     
 }
+
+const games = {
+    game1: "nfs",
+    game2: "pokemon"
+}
+
+// This will show an error as it will display that games is not iterable because objects are not iterable in "for of" loop
+// for (const [key, value] of games) {
+//     console.log(`${key} => ${value}`);
+    
+// }

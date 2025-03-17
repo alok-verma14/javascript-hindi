@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<bodyb style="background-color: #414141;">
+    <h1> Chai and Javascript </h1>
+
+    <button id="start"> Start </button>
+    <button id="stop"> Stop </button>
+</body>
+<script>
+
+    let start = document.querySelector('#start');
+    let stop = document.querySelector('#stop');
+    let intervalId = null;
+
+    const sayName = (str) => {
+            console.log(str)
+        };
+
+
+
+    start.addEventListener('click', () => {
+        if(!intervalId){
+            console.log("start is clicked")
+            intervalId = setInterval(sayName, 2000, "Alok");
+        }
+    });
+
+    stop.addEventListener('click', () => {
+        console.log("stop is clicked");
+        clearInterval(intervalId);
+        intervalId = null;
+    })
+   
+</script>
+</html>

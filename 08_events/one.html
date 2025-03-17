@@ -29,10 +29,33 @@
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altKey, ctrlKey, shiftKey, keyCode
+    document.getElementById('images').addEventListener('click', (e) => {
+        // console.log("clicked inside a ul")
+    }, false);
 
     document.getElementById('owl').addEventListener('click', (e) => {
-        console.log(e)
+        // console.log("Owl Clicked");
+        // e.stopPropagation();
+        
     }, true)
+
+    document.getElementById('google').addEventListener('click', (e) => {
+        // console.log('google clicked');
+        // e.preventDefault();
+        // e.stopPropagation();
+    }, false)
+
+    document.querySelector("#images").addEventListener('click', (e) => {
+        
+        if(e.target.tagName === 'IMG'){
+
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
+        }
+        
+        // removeIt.parentNode.removeChild(removeIt);
+    })
 
 
 </script>

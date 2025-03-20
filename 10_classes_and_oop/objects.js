@@ -29,7 +29,7 @@ const alok =  new createUser("Biscuits", 10);
 const legend = new createUser("Maaza", 25);
 
 alok.printMe();
-legend.increment();
+
 console.log(legend);
 
 

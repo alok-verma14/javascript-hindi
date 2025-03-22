@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure and Lexical Scoping</title>
+</head>
+<body style="background-color: #313131">
+    <button id="pink">Pink </button>
+    <button id="yellow">Yellow</button>
+</body>
+<script>
+
+    // Lexical Scope 
+    // function parent() {
+    //     let name = "Alok Verma";
+
+    //     function child1() {
+    //         console.log("child1: ",name);
+            
+    //     }
+    //     function child2() {
+    //         console.log("child2: ",name);
+            
+    //     }
+    //     child1();
+    //     child2();
+    // };
+    // // parent();
+
+    // //Closure
+
+    // function makeFunc(){
+    //     const name = "mozilla";
+    //     function displayName() {
+    //         console.log(name);
+            
+    //     }
+    //     return displayName();
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+</script>
+
+<script>
+    // document.getElementById('pink').onclick = function() {
+    //     document.body.style.backgroundColor = "pink";
+    // }
+    // document.getElementById('yellow').onclick = function() {
+    //     document.body.style.backgroundColor = "yellow";
+    // }
+
+    function clickHandler(color){
+        return function(){
+            document.body.style.backgroundColor = `${color}`;
+        }
+    }
+
+    document.getElementById('yellow').onclick = clickHandler("yellow")
+    document.getElementById('pink').onclick = clickHandler("pink")
+
+</script>
+</html>

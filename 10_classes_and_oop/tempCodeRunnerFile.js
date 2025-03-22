@@ -1,2 +1,2 @@
-console.log(user1.encryptPassword());
-// console.log(user1.changeUsername());
+this.email = email;
+        this.password = password;
